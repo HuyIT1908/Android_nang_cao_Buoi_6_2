@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         tv_tk = findViewById(R.id.tv_tk);
         tv_mk = findViewById(R.id.tv_mk);
+        tv_tk.setTextSize(26);
+        tv_mk.setTextSize(24);
         printHashKey(MainActivity.this);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 // App code
-//                tv_tk.setText(String.valueOf( loginResult.getAccessToken()));
+                tv_tk.setText("Đăng nhập thành công");
             }
 
             @Override
